@@ -45,15 +45,15 @@ vim.keymap.set("n", "<leader>sb", function ()
 end)
 
 -- window switching
---vim.keymap.set("n", "<C-h>", "<cmd>wincmd h<CR>")
---vim.keymap.set("n", "<C-j>", "<cmd>wincmd j<CR>")
---vim.keymap.set("n", "<C-k>", "<cmd>wincmd k<CR>")
---vim.keymap.set("n", "<C-l>", "<cmd>wincmd l<CR>")
+vim.keymap.set("n", "<leader>Left", "<cmd>wincmd h<CR>")
+vim.keymap.set("n", "<leader>Down", "<cmd>wincmd j<CR>")
+vim.keymap.set("n", "<leader>Up", "<cmd>wincmd k<CR>")
+vim.keymap.set("n", "<leader>Right", "<cmd>wincmd l<CR>")
 
 -- window movement
---vim.keymap.set("n", "<C-Left>", "<cmd>wincmd H<CR>")
---vim.keymap.set("n", "<C-Right>", "<cmd>wincmd L<CR>")
---vim.keymap.set("n", "<C-Up>", "<cmd>wincmd K<CR>")
---vim.keymap.set("n", "<C-Down>", "<cmd>wincmd J<CR>")
---vim.keymap.set("n", "<C-r>", "<cmd>wincmd r<CR>")
+vim.keymap.set("n", "<C-Left>", "<cmd>wincmd H<CR>")
+vim.keymap.set("n", "<C-Right>", "<cmd>wincmd L<CR>")
+vim.keymap.set("n", "<C-Up>", "<cmd>wincmd K<CR>")
+vim.keymap.set("n", "<C-Down>", "<cmd>wincmd J<CR>")
+vim.keymap.set("n", "<C-r>", "<cmd>wincmd r<CR>")
 
