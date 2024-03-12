@@ -1,13 +1,18 @@
 local http = require("socket.http")
 local xml = require("xmlreader")
 
-local body, code, headers, status = http.request("https://github.com/neovim/neovim/tags.atom")
+http.TIMEOUT = 1
+
+local body, _, _, _ = http.request("https://github.com/neovim/neovim/tags.atom")
+if (body == nil) then
+    return
+end
 
 local r = assert(xml.from_string(body))
 
 local function generate_installed_version()
-    v = vim.inspect(vim.version())
-    version, _ = v:gsub("{.*major = ", "v"):gsub(",.*minor = ", "."):gsub(",.*patch = ", "."):gsub(",.*", "")
+    local v = vim.inspect(vim.version())
+    local version, _ = v:gsub("{.*major = ", "v"):gsub(",.*minor = ", "."):gsub(",.*patch = ", "."):gsub(",.*", "")
     return version
 end
 
